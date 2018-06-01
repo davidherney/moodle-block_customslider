@@ -1,0 +1,285 @@
+/*
+ * This file is part of Moodle - http://moodle.org/
+ * Moodle is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Moodle is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ *
+ * Aprendemos extra elements style sheet
+ *
+ * @package    block_customslider
+ * @copyright  2018 David Herney
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ *
+ */
+
+/* Slider */
+/* Browser Resets */
+.block_customslider_box .flex-container a:active,
+.block_customslider_box .flexslider a:active,
+.block_customslider_box .flex-container a:focus,
+.block_customslider_box .flexslider a:focus {
+    outline: none;
+}
+
+.block_customslider_box .slides,
+.block_customslider_box .flex-control-nav,
+.block_customslider_box .flex-direction-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* IMPORTANT! FlexSlider Necessary Styles */
+.block_customslider_box .flexslider {
+    margin: 0;
+    padding: 0;
+}
+
+.block_customslider_box .flexslider .slides > li {
+    display: none;
+    -webkit-backface-visibility: hidden;
+}
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+.block_customslider_box .flexslider .slides img {
+    width: 100%;
+    display: block;
+}
+
+.block_customslider_box .flex-pauseplay span {
+    text-transform: capitalize;
+}
+
+/* Clearfix for the .slides element */
+.block_customslider_box .slides:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+html[xmlns] .block_customslider_box .slides {
+    display: block;
+}
+
+* html .block_customslider_box .slides {
+    height: 1%;
+}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you  * include js that eliminates this class on page load */
+.no-js .block_customslider_box .slides > li:first-child {
+    display: block;
+}
+
+/* FlexSlider Default Theme *********************************/
+.block_customslider_box .flexslider {
+    margin: 0;
+    background: #fff;
+    position: relative;
+    zoom: 1;
+}
+
+.block_customslider_box .flex-viewport {
+    max-height: 2000px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.dir-rtl .block_customslider_box .flex-viewport {
+    direction: ltr;
+    max-height: 2000px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.loading .block_customslider_box .flex-viewport {
+    max-height: 300px;
+}
+
+.block_customslider_box .flexslider .slides {
+    zoom: 1;
+}
+
+/* Direction Nav */
+.block_customslider_box .flex-direction-nav a {
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    opacity: 0;
+    -webkit-transition: all .3s ease;
+    margin: 0;
+    font-size: 50px;
+}
+
+.block_customslider_box .flex-direction-nav a {
+    margin: -25px;
+}
+
+.block_customslider_box .flex-direction-nav .flex-next {
+    right: 0;
+    opacity: .2;
+}
+
+.block_customslider_box .flex-direction-nav .flex-prev {
+    left: 0;
+    opacity: .2;
+}
+
+.block_customslider_box .flexslider:hover .flex-next {
+    opacity: 1;
+}
+
+.block_customslider_box .flexslider:hover .flex-prev {
+    opacity: 1;
+}
+
+.block_customslider_box .flex-direction-nav .disabled {
+    opacity: 0.3 !important;
+    filter: alpha(opacity=30);
+    cursor: default;
+}
+
+/* Control Nav */
+.block_customslider_box .flex-control-nav {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
+
+.block_customslider_box .flex-control-nav li {
+    margin: 0 4px;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+
+.block_customslider_box .flex-control-paging li a {
+    width: 8px;
+    height: 8px;
+    display: block;
+    background: #666;
+    background: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    text-indent: -9999px;
+    border-radius: 20px;
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.block_customslider_box .flex-control-paging li a:hover {
+    background: #333;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.block_customslider_box .flex-control-paging li a.flex-active {
+    background-color: #000;
+    cursor: default;
+}
+
+.block_customslider_box .flex-control-thumbs {
+    margin: 5px 0 0;
+    position: static;
+    overflow: hidden;
+}
+
+.block_customslider_box .flex-control-thumbs li {
+    width: 25%;
+    float: left;
+    margin: 0;
+}
+
+.block_customslider_box .flex-control-thumbs img {
+    width: 100%;
+    display: block;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.block_customslider_box .flex-control-thumbs img:hover {
+    opacity: 1;
+}
+
+.block_customslider_box .flex-control-thumbs .active {
+    opacity: 1;
+    cursor: default;
+}
+
+/* Caption style */
+/* IE rgba() hack */
+.block_customslider_box .flex-caption {
+    background: none;
+    -ms-filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#4C000000, endColorstr=#4C000000);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#4C000000, endColorstr=#4C000000);
+    zoom: 1;
+}
+
+.block_customslider_box .flex-caption {
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    margin: 0;
+    padding: 25px 25px 25px 30px;
+    position: absolute;
+    right: 0;
+    width: 50%;
+}
+
+.block_customslider_box .flex-caption h3 {
+    color: [[setting:sliderh3color]];
+    letter-spacing: 1px;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+.block_customslider_box .flex-caption h4 {
+    color: [[setting:sliderh4color]];
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+
+.block_customslider_box .flex-caption p {
+    margin: 0 0 15px;
+}
+
+.block_customslider_box .flex-caption .submit {
+    margin-right: 10px;
+    float: right;
+    color: [[setting:slidersubmitcolor]] !important;
+    background: [[setting:slidersubmitbgcolor]]
+}
+
+.block_customslider_slider {
+    margin: 0 0 10px;
+}
+
+.block_customslider_box .slides li {
+    position: relative;
+}
+
+.block_customslider_box .flex-control-nav {
+    margin-bottom: -40px;
+}
+
+.block_customslider_box .slidewrap {
+    margin-bottom: 10px;
+}
