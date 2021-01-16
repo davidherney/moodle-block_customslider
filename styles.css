@@ -243,7 +243,6 @@ html[xmlns] .block_customslider_box .slides {
 }
 
 .block_customslider_box .flex-caption h3 {
-    color: [[setting:sliderh3color]];
     letter-spacing: 1px;
     margin-bottom: 0px;
     text-transform: uppercase;
@@ -251,7 +250,6 @@ html[xmlns] .block_customslider_box .slides {
 }
 
 .block_customslider_box .flex-caption h4 {
-    color: [[setting:sliderh4color]];
     letter-spacing: 1px;
     margin-bottom: 20px;
     font-size: 1em;
@@ -264,8 +262,6 @@ html[xmlns] .block_customslider_box .slides {
 .block_customslider_box .flex-caption .submit {
     margin-right: 10px;
     float: right;
-    color: [[setting:slidersubmitcolor]] !important;
-    background: [[setting:slidersubmitbgcolor]]
 }
 
 .block_customslider_slider {

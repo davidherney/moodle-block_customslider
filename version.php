@@ -24,7 +24,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2018052300;
+$plugin->version   = 2018052301;
 $plugin->requires  = 2017051504;
 $plugin->component = 'block_customslider';
 $plugin->release = 'salsa';
+$plugin->maturity = MATURITY_BETA;
